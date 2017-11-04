@@ -1,0 +1,31 @@
+nav{
+  padding: 0 10px;
+  color: white;
+  height: 42px;
+  display: block;
+  background-color: rgba(0,0,0, 0.7);
+  line-height: 42px;
+
+  ul {
+    height: 42px;
+    display: block;
+
+    li {
+      cursor: pointer;
+      display: inline-block;
+      font-weight: 300;
+      transition: all 0.3s ease;
+      vertical-align: top;
+    }
+
+  }
+}
+
+.logo {
+  color: white;
+  float: left;
+}
+
+.nav_sign{
+  float: right;
+}

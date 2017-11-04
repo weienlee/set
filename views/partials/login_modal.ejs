@@ -1,0 +1,143 @@
+<div class="cd-user-modal" id="login_modal">
+  <div class="cd-user-modal-container">
+    <!-- switcher tab here -->
+    <ul class="cd-switcher">
+      <li><div class="">Log in</div></li>
+      <li><div class="selected">New account</div></li>
+    </ul>
+
+    <div id="error_container">
+      <span></span>
+      <div id="error_close">
+        X
+      </div>
+    </div>
+
+    <div id="cd-login">
+      <form class="cd-form" id="login_form">
+        <p class="fieldset">
+          <label
+            class="image-replace cd-username"
+            for="login-username"
+          >
+            Username
+          </label>
+          <input
+            class="full-width has-padding has-border"
+            id="login-username"
+            type="text"
+            placeholder="Username"
+            form="login_form"
+          >
+          <span class="cd-error-message">
+            Error message here!
+          </span>
+        </p>
+
+        <p class="fieldset">
+          <label
+            class="image-replace cd-password"
+            for="login-password"
+          >
+            Password
+          </label>
+          <input
+            class="full-width has-padding has-border"
+            id="login-password"
+            type="password"
+            placeholder="Password"
+            form="login_form"
+          >
+          <span class="cd-error-message">
+            Error message here!
+          </span>
+        </p>
+
+        <p class="fieldset">
+          <button
+            class="full-width has-padding"
+            id="login_button"
+            type="submit"
+            form="login_form"
+          >
+            Log In
+          </button>
+        </p>
+      </form>
+    </div>
+
+    <div id="cd-signup">
+      <form class="cd-form" id="signup_form">
+        <p class="fieldset">
+          <label
+            class="image-replace cd-username"
+            for="signup-username"
+          >
+            Username
+          </label>
+          <input
+            class="full-width has-padding has-border"
+            id="signup-username"
+            type="text"
+            placeholder="Username"
+            form="signup_form"
+          >
+          <span class="cd-error-message">
+            Error message here!
+          </span>
+        </p>
+
+        <p class="fieldset">
+          <label
+            class="image-replace cd-password"
+            for="signup-password"
+          >
+            Password
+          </label>
+          <input
+            class="full-width has-padding has-border"
+            id="signup-password"
+            type="password"
+            placeholder="Password"
+            form="signup_form"
+          >
+          <span class="cd-error-message">
+            Passwords must match
+          </span>
+        </p>
+
+        <p class="fieldset">
+          <label
+            class="image-replace cd-password"
+            for="signup-confirm"
+          >
+            Password
+          </label>
+          <input
+            class="full-width has-padding has-border"
+            id="signup-confirm"
+            type="password"
+            placeholder="Confirm Password"
+            form="signup_form"
+          >
+          <span class="cd-error-message">
+            Passwords must match
+          </span>
+        </p>
+
+        <p class="fieldset">
+          <button
+            class="full-width has-padding"
+            id="signup_button"
+            type="submit"
+            form="signup_form"
+          >
+            Sign Up
+          </button>
+        </p>
+      </form>
+    </div>
+
+    <a href="#0" class="cd-close-form">Close</a>
+  </div>
+</div>

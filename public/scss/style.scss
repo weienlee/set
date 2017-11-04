@@ -1,0 +1,19 @@
+body {
+  font-family:'Lato', sans-serif;
+  margin: 0;
+  background-color: #e9ebee;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+button:focus {
+  outline: none;
+}
+
+input {
+  outline: none;
+}
