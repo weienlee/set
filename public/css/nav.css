@@ -21,3 +21,16 @@ nav {
 
 .nav_sign {
   float: right; }
+
+.username {
+  float: right;
+  font-weight: 300; }
+  .username a {
+    color: white; }
+
+.logout {
+  cursor: pointer;
+  float: right;
+  margin: 6px 0 0 10px; }
+  .logout img {
+    width: 30px; }

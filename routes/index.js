@@ -5,9 +5,10 @@ var User = require('../models/user.js');
 
 // GET home page
 router.get('/', function(req, res) {
+    console.log(req.session);
     if (req.session.username) {
         User.getUser(req.session.username, function(response) {
-            res.render('index', {
+            res.render('pages/index', {
                 title: 'SET',
                 auth: true,
                 username: req.session.username,
@@ -15,8 +16,8 @@ router.get('/', function(req, res) {
             });
         });
     } else {
-        res.render('index', {
-            title: 'index',
+        res.render('pages/index', {
+            title: 'SET',
             auth: false
         });
     }
@@ -24,22 +25,28 @@ router.get('/', function(req, res) {
 
 // POST /login
 router.post('/login', function(req, res) {
-    var username = req.body.username;
-    var password = req.body.password;
+    const username = req.body.username;
+    const password = req.body.password;
     utils.checkUserDetails(res, username, password, function() {
-        User.findByName(username, function(result) {
+        User.authenticate(username, password, function(result) {
             if (result.code === 200) {
-                var user = result.data;
-                if (password == user.password) {
-                    req.session.username = username;
-                    utils.sendSuccessResponse(res);
-                } else {
-                    utils.sendErrResponse(res, 403, 'Incorrect password');
-                }
+                req.session.username = username;
+                utils.sendSuccessResponse(res);
             } else {
                 utils.sendErrResponse(res, result.code, result.err);
             }
         });
+    });
+});
+
+// POST /logout
+router.post('/logout', utils.requireLogin, function(req, res) {
+    req.session.destroy(function (err) {
+        if (err) {
+            utils.sendErrResponse(res, 500, err);
+        } else {
+            utils.sendSuccessResponse(res);
+        }
     });
 });
 

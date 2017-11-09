@@ -4,7 +4,22 @@
       <%= title %>
     </div>
   </a>
+  <% if (!auth) { %>
   <ul class="nav_sign">
-    <li id="nav_signin" class="signin">Log in</li>
+    <li id="nav_signin" class="login">Log in</li>
   </ul>
+  <% } else { %>
+    <div class="logout">
+      <img src="/images/logout.png">
+    </div>
+    <div
+      class="username"
+      data-user_id=<%= user._id %>
+      data-username=<%= username %>
+    >
+      <a href="#">
+        <%= username %>
+      </a>
+    </div>
+  <% } %>
 </nav>

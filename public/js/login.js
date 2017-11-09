@@ -62,7 +62,7 @@ $(function() {
     });
 
     // logout
-    $('#logout').on('click', function(e) {
+    $('.logout').on('click', function(e) {
         $.ajax({
             url: '/logout',
             type: "POST",

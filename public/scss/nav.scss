@@ -26,6 +26,27 @@ nav{
   float: left;
 }
 
-.nav_sign{
+.nav_sign {
   float: right;
+}
+
+.username {
+  float: right;
+  font-weight: 300;
+
+  a {
+    color: white;
+  }
+
+}
+
+.logout {
+  cursor: pointer;
+  float: right;
+  margin: 6px 0 0 10px;
+
+  img {
+    width: 30px;
+  }
+
 }

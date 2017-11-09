@@ -86,6 +86,8 @@ utils.checkUserDetails = function(res, username, password, success) {
         utils.sendErrResponse(res, 403, 'You must enter a username and password.');
     } else if (typeof(username) != 'string' || typeof(password) != 'string') {
         utils.sendErrResponse(res, 403, 'Form inputs are of the wrong type.');
+    } else if (!username.match(/^[0-9a-zA-Z]{1,20}$/)) {
+        utils.sendErrResponse(res, 403, 'Username must be alphanumeric and at most 20 characters.');
     } else {
         success();
     }
